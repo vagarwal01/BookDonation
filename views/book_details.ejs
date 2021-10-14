@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+
+
+    <!-- Bootstrap -->
+    <!-- --------------BootStrap Inclusion Starts--------------------- -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- --------------BootStrap Inclusion Ends--------------------- -->
+
+
+    <!-- CSS -->
+    <!-- --------------FontAwesome Inclusion Starts--------------------- -->
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="/style_book_upload.css">
+    <!-- --------------FontAwesome Inclusion Ends--------------------- -->
+
+
+    <style type="text/css">
+        .books {
+            display: flex;
+            max-width: 800px;
+        }
+        
+        .bookpdf {
+            display: flex;
+            flex-direction: column;
+            max-width: 250px;
+        }
+        
+        .bookpdf img {
+            border: 2px solid black;
+        }
+        
+        .bookpdf button {
+            width: 100%;
+            padding: 5px;
+            border: 2px solid black;
+            background-color: #8A0808;
+            color: #fff;
+            font-size: 30px;
+            transition: 0.5s;
+        }
+        
+        .bookpdf button:hover {
+            background-color: #2E2E2E;
+            color: #fff;
+        }
+        
+        .bookDetails {
+            width: 100%;
+            margin-left: 50px;
+        }
+        
+        .donatedBy {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding-right: 30px;
+        }
+        
+        .donatedBy .contactLinks {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .donatedBy .contactLinks button {
+            padding: 5px 15px;
+            margin: 2px;
+            border: 1px solid black;
+            outline: none;
+            border-radius: 7px;
+            transition: 0.5s;
+        }
+        
+        .donatedBy .contactLinks button:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <section id="header-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <span style="font-size: 2em; color: black;">
+                 <i class="fas fa-book-open"></i>
+                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <h2 class="my-name-top">Book Donation&nbsp&nbsp&nbsp&nbsp&nbsp</h2>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard" style="padding-top: 12px;">
+                            <span style="font-size: 1em; color: black; padding-top: 5em;">
+                  <i class="fas fa-angle-double-up"></i>
+                  <span class="sr-only">(current)</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item hmepge_href">
+                        <a class="nav-link" href="/dashboard">Dashboard&nbsp&nbsp&nbsp<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0"></form>
+                <a class="nav-link" href="/logout">
+                    <button class="btn btn-outline-light btn btn-dark" type="submit" style="width: 2.5cm;"></i>Logout</button>
+                </a>
+                </form>
+            </div>
+        </nav>
+    </section>
+
+    <h1 style="margin-top: 3cm;margin-bottom: 0cm; text-align: center;"><b>Book Details</b></h1>
+
+    <div class="wrapper books">
+        <% if (data[0].fileLoc) { %>
+            <div class="bookpdf">
+                <img src="/images/PDF.png" height="300">
+                <a href="/uploads/<%=data[0].fileLoc%>" target="_blank"><button>VIEW</button></a>
+            </div>
+            <% } %>
+                <div class="bookDetails">
+                    <h3><b><%=data[0].bookname%> - <%=data[0].year %></b></h3><br>
+                    <h5>
+                        <%=data[0].genre%>
+                    </h5>
+                    <h6>
+                        <%=data[0].des%>
+                    </h6>
+                    <hr style="border: 1px solid black; margin: 40px 0px">
+                    <% if (data[0].fileLoc) { %>
+                        <h4><b>Uploaded By :</b></h4><br>
+                        <h5>
+                            <%=data[0].fname%>
+                                <%=data[0].lname%>
+                        </h5>
+                        <h6>
+                            <%=data[0].email%>
+                        </h6>
+                        <h6>
+                            <%=data[0].contact%>
+                        </h6>
+                        <% } else { %>
+                            <h5><b>Interested in this book ???</b> Contact Below :</h5><br>
+                            <div class="donatedBy">
+                                <div class="contacts">
+                                    <h5>
+                                        <%=data[0].fname%>
+                                            <%=data[0].lname%>
+                                    </h5>
+                                    <h6>
+                                        <%=data[0].email%>
+                                    </h6>
+                                    <h6>
+                                        <%=data[0].contact%>
+                                    </h6>
+                                </div>
+                                <div class="address">
+                                    <h6>
+                                        <%=data[0].address%>
+                                            </h5>
+                                            <h6>
+                                                <%=data[0].city%>,
+                                                    <%=data[0].state%>
+                                            </h6>
+                                            <h6>
+                                                <%=data[0].pincode%>
+                                            </h6>
+                                </div>
+                                <div class="contactLinks">
+                                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank"><button>Drop a Mail</button></a>
+                                    <button>Call the Person</button>
+                                </div>
+                            </div>
+                            <% } %>
+                </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+
+    <!-- Bootstrap -->
+    <!-- --------------BootStrap Inclusion Starts--------------------- -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- --------------BootStrap Inclusion Ends--------------------- -->
+
+
+    <!-- CSS -->
+    <!-- --------------FontAwesome Inclusion Starts--------------------- -->
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="/style_dashboard.css">
+    <!-- --------------FontAwesome Inclusion Ends--------------------- -->
+</head>
+
+
+<body>
+
+    <section id="header-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <span style="font-size: 2em; color: black;">
+                 <i class="fas fa-book-open"></i>
+                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <h2 class="my-name-top">Book Donation&nbsp&nbsp&nbsp&nbsp&nbsp</h2>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                    </li>
+
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0"></form>
+                <a class="nav-link" href="/logout">
+                    <button class="btn btn-outline-light btn btn-dark" type="submit" style="width: 2.5cm;"></i>Logout</button>
+                </a>
+                </form>
+            </div>
+        </nav>
+    </section>
+
+    <h1 style="margin-top: 3cm;margin-bottom: 2cm; text-align: center;"><b>Dashboard</b></h1>
+
+    <div class="card-columns">
+
+        <a href="/book_upload">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 40px;"><b>Upload/Donate Book</b></h5>
+                    <p>Upload book details and your contact information to donate or directly upload the soft copy.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/book_find">
+            <div class="card p-2">
+                <blockquote class="blockquote mb-0 card-body">
+                    <h5 class="card-title" style="font-size: 40px;"><b>Search Book</b></h5>
+                    <p>Search for desired book(s) and doner contact information.</p>
+                </blockquote>
+            </div>
+        </a>
+
+        <a href="/download_book">
+            <div class="card p-1">
+                <blockquote class="blockquote mb-0 card-body">
+                    <h5 class="card-title" style="font-size: 40px;"><b>Download Book</b></h5>
+                    <p>Download soft copies of books.</p>
+                </blockquote>
+            </div>
+        </a>
+
+        <a href="/put_request">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 40px;"><b>Put Request</b></h5>
+                    <p class="card-text"></p>
+                    <p class="card-text">You can upload a request for doner requesting book donation.</p>
+                </div>
+            </div>
+        </a>
+
+
+        <div class="card  text-white text-center p-3" style="background: #202020;">
+            <blockquote class="blockquote mb-0">
+                <p style="color: #FFFFFF;"><i>“ Remember that the happiest people are not those getting more, but those giving more ”</i></p>
+                <footer class="blockquote-footer">
+                    <small>
+         <i> H. Jackson Brown, Jr.</i> 
+        </small>
+                </footer>
+
+            </blockquote>
+        </div>
+
+
+
+        <a href="/find_request">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 40px;"><b>Look for Request</b></h5>
+                    <p class="card-text"></p>
+                    <p>You can look for posted requestes to donate books.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/reg_org">
+            <div class="card p-3 text-right">
+                <blockquote class="blockquote mb-0">
+                    <h5 class="card-title" style="font-size: 40px;"><b>Register Organisation</b></h5>
+                    <p>You can register your Organisation, and all contact information.</p>
+                </blockquote>
+            </div>
+        </a>
+
+        <a href="/search_org">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 40px;"><b>Search Organisation</b></h5>
+                    <p>You can search for Organisation(s), and all their contact information.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/buy_book">
+            <div class="card p-1">
+                <blockquote class="blockquote mb-0 card-body">
+                    <h5 class="card-title" style="font-size: 40px;"><b>Buy Book</b></h5>
+                    <p>Buy books online through our secured payment gateway.</p>
+                </blockquote>
+            </div>
+        </a>
+
+    </div>
+
+
+</body>
+
+</html>

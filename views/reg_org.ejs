@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organisation Registration</title>
+  
+
+  <!-- Bootstrap -->
+        <!-- --------------BootStrap Inclusion Starts--------------------- -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- --------------BootStrap Inclusion Ends--------------------- -->
+
+
+    <!-- CSS -->
+        <!-- --------------FontAwesome Inclusion Starts--------------------- -->
+        <link rel="stylesheet" href="/css/all.min.css">
+        <link rel="stylesheet" href="/style_reg_org.css">
+        <!-- --------------FontAwesome Inclusion Ends--------------------- -->
+</head>
+
+
+<body>
+
+  <section id="header-navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <span style="font-size: 2em; color: black;">
+                 <i class="fas fa-book-open"></i>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <h2 class="my-name-top">Book Donation&nbsp&nbsp&nbsp&nbsp&nbsp</h2>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard" style="padding-top: 12px;">
+                <span style="font-size: 1em; color: black; padding-top: 5em;">
+                  <i class="fas fa-angle-double-up"></i>
+                  <span class="sr-only">(current)</span>
+                </span>
+              </a>
+          </li>
+          <li class="nav-item hmepge_href">
+            <a class="nav-link" href="/dashboard">Dashboard&nbsp&nbsp&nbsp<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0"></form>
+          <a class="nav-link" href="/logout">
+            <button class="btn btn-outline-light btn btn-dark" type="submit" style="width: 2.5cm;"></i>Logout</button>
+          </a>
+          </form>
+      </div>
+    </nav>
+  </section>
+
+<h1 style="margin-top: 3cm;margin-bottom: 2cm; text-align: center;"><b>Organisation Registration</b></h1>
+
+
+
+<form class="form" method="POST" action="/regorg">
+
+  <div class="wrapper">
+    <h3 style="margin-top: 0cm;margin-bottom: 1cm;"><b>Organisation Contact Info</b></h3>
+  <div class="form-row">
+  <div class="form-group col-md-6">
+    <div class="col">
+      <label for="validationDefault01">Organisation name</label>
+      <input type="text" class="form-control" name="orgname" id="validationDefault01" placeholder="eg: Bachpan House" required>
+    </div>
+  </div>
+
+  <div class="form-group col-md-6">
+    <div class="col">
+      <label for="validationDefault01">Organisation Type</label>
+      <input type="text" class="form-control" name="orgtype" id="validationDefault01" placeholder="eg: Orphanage" required>
+    </div>
+  </div>
+</div>
+
+
+  <div class="form-group col-md-14">
+    <div class="col">
+      <label for="validationDefault01">Address</label>
+      <input type="text" class="form-control" name="address" id="validationDefault01" placeholder="eg: 1234 Main Street" required>
+    </div>
+  </div>
+  <div class="form-row">
+  <div class="form-group col-md-6">
+    <div class="col">
+      <label for="validationDefault01">City</label>
+      <input type="text" class="form-control" name="city" id="validationDefault01" placeholder="eg: Ghaziabad" required>
+    </div>
+  </div>
+  
+  <div class="form-group col-md-4">
+    <div class="col">
+      <label for="validationDefault01">State</label>
+      <input type="text" class="form-control" name="state" id="validationDefault01" placeholder="eg: Uttar Pradesh" required>
+    </div>
+  </div>
+
+  <div class="form-group col-md-2">
+    <div class="col">
+      <label for="validationDefault01">Zip</label>
+      <input type="text" class="form-control" name="zip" id="validationDefault01" placeholder="eg: 201002" required>
+    </div>
+  </div>
+</div>
+
+
+  <div class="form-group col-md-14">
+    <div class="col">
+      <label for="validationDefault01">Email Address</label>
+      <input type="email" class="form-control" name="email" id="validationDefault01" placeholder="eg: abc123@gmail.com" required>
+    </div>
+  </div>
+
+  <div class="form-group col-md-14">
+    <div class="col">
+      <label for="validationDefault01">Contact Number</label>
+      <input type="number" class="form-control" name="contact" id="validationDefault01" placeholder="eg: 9898****99">
+    </div>
+  </div>
+
+  <h3 style="margin-top: 2cm;margin-bottom: 1cm;"><b>Children Info</b></h3>
+
+  <div class="form-group col-md-14">
+    <div class="col">
+      <label for="validationDefault01">Number of Children</label>
+      <input type="number" class="form-control" name="childno" id="validationDefault01" placeholder="eg: 20" required>
+    </div>
+  </div>
+
+  <div class="form-group col-md-14">
+    <div class="col">
+      <label for="validationDefault01">Age group</label>
+      <input type="text" class="form-control" name="age" id="validationDefault01" placeholder="eg: 05 to 15" required>
+    </div>
+  </div>
+  
+  <div class="form-group col-md-14">
+    <div class="col">
+      <label for="validationDefault01">Description of Organisation</label>
+      <textarea type="text" class="form-control" name="description" id="exampleFormControlTextarea" rows="3" placeholder="eg: We have 20 boys and 10 girls who wants to study, but we don't have enough budget to buy books for them. It would be grateful of you to donate some books for us" required></textarea>
+    </div>
+  </div>
+
+
+    <div class="button" style="margin: 1cm auto;">
+      <div class="center">
+      <a href="" >
+        <button type="submit" class="btn btn-outline-light btn btn-dark" style="height: 2cm;width: 10cm;">Register</button>
+      </a>
+      </div>
+    </div>	
+
+    
+
+
+
+
+
+
+</form>
+</div>
+
+
+
+
+
+
+</body>
+</html>
